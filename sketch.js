@@ -37,7 +37,11 @@ function draw() {
       let col = capture.get(i, j); // 從 capture 中取得相對應位置的顏色
       graphics.fill(col);
       graphics.noStroke();
-      graphics.ellipse(i + 10, j + 10, 15, 15); // 繪製圓，中心點偏移 10
+      graphics.rect(i, j, 18, 18); // 繪製方框
+
+      // 在方框中間繪製黑色圓
+      graphics.fill(0);
+      graphics.ellipse(i + 9, j + 9, 10, 10); // 圓的中心點位於方框中心
     }
   }
 
